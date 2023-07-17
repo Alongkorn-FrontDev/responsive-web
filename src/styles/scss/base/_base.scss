@@ -1,0 +1,92 @@
+$black: #292929;
+$white: #FFFFFF;
+$gray: #C2C2C2;
+$gray-light: #E7E7E7;
+$dark-blue: #090C35;
+$puper: #603EBE;
+
+$strcyan: #23bebe;
+$cyan: #8cdbde;
+$lightcyan: #c2edef;
+$yellow: #f6cd64;
+$red: #ff4e4d;
+$link-color: #292929;
+$link-hover-color: #f6cd64;
+
+.black {
+  color: $black;
+}
+.gray {
+  color: $gray;
+}
+.gray-light {
+  color: $gray-light;
+}
+.strcyan {
+  color: $strcyan;
+}
+.cyan {
+  color: $cyan;
+}
+.lightcyan {
+  color: $lightcyan;
+}
+.yellow {
+  color: $yellow;
+}
+
+hr {
+  color: #a8a8a8;
+}
+
+$fontSize: (
+  "lg": 48,
+  "md": 32,
+  "sm": 24,
+  "xs": 16,
+  "ss": 14,
+);
+
+@function getFontSize($block) {
+  @return map-get($fontSize, $block);
+}
+
+/* example "@include font-size(getFontSize('large'));" */
+@mixin font-size($size) {
+  font-size: $size + px;
+  // font-size: ($size / 10) + rem;
+}
+:root {
+  color-scheme: light only;
+}
+body {
+  touch-action: pan-y;
+  -ms-touch-action: pan-y;
+  @include font-size(getFontSize("ss"));
+  background-color: #fff;
+  margin: 0;
+  a {
+    text-decoration: none;
+  }
+
+  .form-control:focus {
+    box-shadow: unset;
+  }
+}
+p {
+  @include font-size(getFontSize("xs"));
+}
+// Clamps a block of text to a certain number of lines,
+// followed by an ellipsis in Webkit and Blink based browsers
+@mixin text-clamp($lines: 2, $line-height: false) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+
+  // Fallback for non-Webkit browsers
+  // (won't show `…` at the end of the block)
+  @if $line-height {
+    max-height: $line-height * $lines * 1px;
+  }
+}
