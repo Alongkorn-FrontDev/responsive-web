@@ -10,7 +10,6 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Slider from '../../components/card/slideCard';
 import SliderBottom from '../../components/card/slideBottomCard';
-import items from './api/article.json'
 
 const inter = Inter({ subsets: ["latin"] });
 
