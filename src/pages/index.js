@@ -36,6 +36,7 @@ export default function Home({ imageFootballer, imageBastketball }) {
                         height={950}
                         alt="Picture of the author"
                         className="image-responsive"
+                        priority
                     />
                   </Box>
                 </Grid>
@@ -107,6 +108,7 @@ export default function Home({ imageFootballer, imageBastketball }) {
                         height={950}
                         alt="Picture of the author"
                         className="image-responsive"
+                        priority
                     />
                   </Box>
                 </Grid>
