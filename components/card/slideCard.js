@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-
+import Container from "@mui/material/Container";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
@@ -21,7 +21,7 @@ export default function Slider() {
   return (
     <>
       <Grid container spacing={2}>
-        <Grid xs={12} md={5}>
+        <Grid xs={12} md={12}>
           <Swiper
            style={{
               "--swiper-navigation-color": "#603EBE",
@@ -39,6 +39,7 @@ export default function Slider() {
             >
             <SwiperSlide>
               <Box className="second">
+              <Container maxWidth="lg">
                 <Grid xs={12} sm={12}>
                   <Typography variant="h2" gutterBottom>
                   <span>01</span>
@@ -48,10 +49,12 @@ export default function Slider() {
                     Connect with coaches directly, you can ping coaches to view profile.
                   </Typography>
                 </Grid>
+                </Container>
               </Box>
             </SwiperSlide>
             <SwiperSlide>
               <Box className="third">
+              <Container maxWidth="lg">
                 <Grid xs={12} sm={12}>
                   <Typography variant="h2" gutterBottom>
                   <span>02</span>
@@ -61,10 +64,12 @@ export default function Slider() {
                     Work with other student athletes to increase visability. When you share and like other players videos it will increase your visability as a player. This is the team work aspect to Surface 1.
                   </Typography>
                 </Grid>
+                </Container>
               </Box>
             </SwiperSlide>
             <SwiperSlide>
               <Box className="last">
+              <Container maxWidth="lg">
                 <Grid xs={12} sm={12}>
                   <Typography variant="h2" gutterBottom>
                   <span>03</span>
@@ -74,6 +79,7 @@ export default function Slider() {
                     Resources and tools for you to get better as a student Athelte. Access to training classes, tutor sessions, etc
                   </Typography>
                 </Grid>
+                </Container>
               </Box>
             </SwiperSlide>
           </Swiper>
