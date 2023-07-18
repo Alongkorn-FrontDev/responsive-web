@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Image from "next/image";
 import React, { useEffect } from 'react';
 import { Inter } from "next/font/google";
@@ -17,14 +16,9 @@ export default function Home({ imageFootballer, imageBastketball }) {
 
   return (
     <>
-      <Head>
-        <title>Responsive Website</title>
-        <meta name="description" content="Responsive Website" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Container maxWidth={false} className="home-page">
         <Box sx={{ flexGrow: 1 }}>
+          {/* Begin Bottom Section */}
           <Grid container spacing={4} className="top-section">
             <Box className="first">
               <Container maxWidth="lg">
@@ -91,30 +85,30 @@ export default function Home({ imageFootballer, imageBastketball }) {
                 </Grid>
               </Container>
             </Box>
-
             <Grid xs={12} sm={12} className="slide-mobile">
+              {/* Begin Slide On Mobile Responsive */}
               <Slider></Slider>
+              {/* End Slide On Mobile Responsive */}
             </Grid>
           </Grid>
-
+           {/* End Top Section */}
+          {/* Begin Bottom Section */}
           <Grid container spacing={4} className="bottom-section">
             <Box className="first">
               <Container maxWidth="lg">
                 <Grid xs={12} sm={12} order={{xs: 3, sm: 1, lg: 1 }}>
-                  <Box className="image-box">
+                  <Box className="image-box" sx={{position: {xs: "relative", sm: "absolute", lg: "absolute"}}}>
                     <Image
                         src={imageBastketball}
                         width={670}
                         height={950}
                         alt="Picture of the author"
                         className="image-responsive"
-                        priority
                     />
                   </Box>
                 </Grid>
                 <Grid xs={12} xsOffset={0} sm={6} smOffset={0} lg={6} lgOffset={0} order={{xs: 1, sm: 2, lg: 2 }}>
                   <Typography variant="h1" gutterBottom>
-                  <span>01</span>
                   PLAYERS
                   </Typography>
                 </Grid>
@@ -159,11 +153,13 @@ export default function Home({ imageFootballer, imageBastketball }) {
                 </Grid>
               </Container>
             </Box>
-
             <Grid xs={12} sm={12} className="slide-mobile">
+              {/* Begin Slide On Mobile Responsive */}
               <SliderBottom></SliderBottom>
+              {/* End Slide On Mobile Responsive */}
             </Grid>
           </Grid>
+          {/* End Bottom Section */}
         </Box>
       </Container>
     </>
