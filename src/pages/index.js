@@ -96,8 +96,8 @@ export default function Home({ imageFootballer, imageBastketball }) {
           <Grid container spacing={4} className="bottom-section">
             <Box className="first">
               <Container maxWidth="lg">
-                <Grid xs={12} sm={12} order={{xs: 3, sm: 1, lg: 1 }}>
-                  <Box className="image-box" sx={{position: {xs: "relative", sm: "absolute", lg: "absolute"}}}>
+                <Grid className="grid-image" xs={12} sm={12} md={12} lg={12} order={{xs: 2, sm: 1, lg: 1 }}>
+                  <Box className="image-box">
                     <Image
                         src={imageBastketball}
                         width={670}

@@ -192,9 +192,19 @@
         @include max-screen (360px) {
             max-height: 560px;
         }
+        .grid-image {
+            position: relative;
+            @include max-screen (768px) {
+                position: relative;
+            }
+            @include max-screen (480px) {
+                position: relative;
+            }
+        }
         .image-box {
             position: absolute;
             width: 700px;
+            display: flex;
             right: 50%;
             transform: translate(90%, 0%);
             @include max-screen (768px) {
